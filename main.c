@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define CMDLINE_SIZE 512
+#define CMDLINE_SIZE 4096
 #define TAB 0x09
 #define LF 0x0a
 #define CR 0x0d
