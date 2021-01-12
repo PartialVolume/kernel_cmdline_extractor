@@ -3,12 +3,19 @@ Outputs data to stdout that is associated with a label i.e shredos="xxxxx xxxxx 
 
 Given a specific label from the kernel command line (cat /proc/cmdline) as input, this program will read the kernel command line
 searching for the specified label and output the associated data. If the data associated with the label is double quoted then the
-data can include embedded whitespace characters.
+data can include embedded whitespace characters. If not quoted then only the first word after the = symbol is read.
 
-If not quoted then only the first word after the = symbol is read.
+### Compilation:
+```
+./autogen.sh
+./configure
+make
+```
 
-### syntax:
+### Syntax:
 kernel_cmdline_extractor label
+   where label is a word followed by a equals symbol in /proc/cmdline. i.e. shredos=--autonuke
+   the label option specified after 'kernel_cmdline_extractor' should not include the '=' symbol.
 
 ### Examples:
 If the kernel command line is as follows
