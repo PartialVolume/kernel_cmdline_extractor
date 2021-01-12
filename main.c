@@ -21,11 +21,11 @@
  * 
  * then
  * 
- * kernel_cmdline_extractor(shredos) would output 'autonuke' to stdout.
+ * kernel_cmdline_extractor shredos would output 'autonuke' to stdout.
  * 
  * while
  * 
- * kernel_cmdline_extractor(loadkeys) would output 'uk' to stdout.
+ * kernel_cmdline_extractor loadkeys would output 'uk' to stdout.
  *
  * Return codes:
  * 0 = success
