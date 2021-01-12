@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
       }
       
       /* record start address of data */
-      output_data = kernel_cmdline+idx+1;
+      output_data = kernel_cmdline+idx;
 
       /* Is the first character a double quote? i.e "--method=dod --rounds=2" */
       if ( kernel_cmdline[ idx ] == '"' && kernel_cmdline[ idx ] != 0 )
@@ -161,6 +161,3 @@ int main(int argc, char **argv) {
    return 2;
 }
 
-/* INFO for call scrit for use in script https://stackoverflow.com/questions/36921658/save-command-output-on-variable-and-check-exit-status )
- * so i can assign the output of this program to a bash variable and check for return value of 0 
- */
