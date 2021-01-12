@@ -44,6 +44,7 @@ int main(int argc, char **argv) {
    int idx;
    int idx2;
    int label_found = 0;
+   size_t status;
    
    char * output_data;
    
@@ -68,7 +69,7 @@ int main(int argc, char **argv) {
    }
    
    /* Read the command line from /proc/cmdline */
-   fread( kernel_cmdline, CMDLINE_SIZE, elements_requested, fp );
+   status = fread( kernel_cmdline, CMDLINE_SIZE, elements_requested, fp );
    
    /* terminate the very end of the buffer to avoid any buffer overrun */
    kernel_cmdline[ CMDLINE_SIZE -1 ] = 0;
