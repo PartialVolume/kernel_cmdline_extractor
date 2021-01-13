@@ -14,20 +14,21 @@ make
 
 ### Syntax:
 kernel_cmdline_extractor label
-   where label is a word followed by a equals symbol in /proc/cmdline. i.e. shredos=--autonuke
-   the label option specified after 'kernel_cmdline_extractor' should not include the '=' symbol.
+   where label is a word followed by a equals symbol in /proc/cmdline. i.e. nwipe_options=--nousb
+   or nwipe_options="--nousb --method=zero", the label option specified after
+   'kernel_cmdline_extractor' should not include the '=' symbol.
 
 ### Examples:
 If the kernel command line is as follows
 ```
-linux /boot/shredos console=tty3 loglevel=3 shredos="--autopoweroff --nousb" loadkeys=uk
+linux /boot/shredos console=tty3 loglevel=3 nwipe_options="--autopoweroff --nousb" loadkeys=uk
 ```
-then specifing shredos as the argument to kernel_cmdline_extractor would output ..
+then specifing nwipe_options as the argument to kernel_cmdline_extractor would output ..
 ```
-#> kernel_cmdline_extractor shredos
+#> kernel_cmdline_extractor nwipe_options
 #> --autopoweroff --nousb
 ```
-For options that can be used with shredos, see nwipe's help, i.e. nwipe --help
+For options that can be used after nwipe_options, see nwipe's help, i.e. nwipe --help
 
 In addition the keyboard could be set from the data associated with the label loadkeys
 ```

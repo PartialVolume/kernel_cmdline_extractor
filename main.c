@@ -16,16 +16,20 @@
  * syntax:
  * kernel_cmdline_extractor label
  * 
- * Example:
- * If the kernel command line = linux /boot/shredos console=tty3 loglevel=3 shredos=autonuke loadkeys=uk
+ * Examples:
+ * If the kernel command line = linux /boot/shredos console=tty3 loglevel=3 nwipe_options=--autonuke loadkeys=uk
  * 
  * then
  * 
- * kernel_cmdline_extractor shredos would output 'autonuke' to stdout.
- * 
- * while
+ * kernel_cmdline_extractor nwipe_options would output '--autonuke' to stdout.
  * 
  * kernel_cmdline_extractor loadkeys would output 'uk' to stdout.
+ * 
+ * If the kernel command line = linux /boot/shredos console=tty3 loglevel=3 nwipe_options="--autonuke --nousb --method=zero" loadkeys=uk
+ * 
+ * then
+ * 
+ * kernel_cmdline_extractor nwipe_options would output '--autonuke --nousb --method=zero' to stdout.
  *
  * Return codes:
  * 0 = success
