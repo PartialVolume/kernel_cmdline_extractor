@@ -77,8 +77,7 @@ int main(int argc, char **argv) {
    }
    
    /* Open a stream to /proc/cmdline */
-   //fp = fopen( "/proc/cmdline", "r" );
-   fp = fopen( "/home/nick/Data/tmp/grub.cfg", "r" );
+   fp = fopen( "/proc/cmdline", "r" );
    
    if ( fp == NULL )
    {
