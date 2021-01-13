@@ -40,3 +40,4 @@ In addition the keyboard could be set from the data associated with the label lo
 * 2 = unable to read /proc/cmdline
 * 3 = No label specified by user
 * 4 = label not found in kernel command line
+* 5 = 4096 byte kernel command line was actually read. Not very likely!

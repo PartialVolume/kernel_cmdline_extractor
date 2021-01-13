@@ -87,6 +87,7 @@ int main(int argc, char **argv) {
    if ( status == elements_requested )
    {
       printf(" The kernel command line is exactly %d, very unlikely!", CMDLINE_SIZE );
+      return 5;
    }
    
    /* terminate the very end of the buffer to avoid any buffer overrun */
