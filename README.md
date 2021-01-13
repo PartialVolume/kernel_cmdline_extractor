@@ -1,3 +1,5 @@
+[![](https://img.shields.io/github/downloads/PartialVolume/kernel_cmdline_extractor/latest/total.svg "Latest version")](https://github.com/PartialVolume/kernel_cmdline_extractor/releases/latest)
+
 # kernel_cmdline_extractor
 Outputs data to stdout that is associated with a label i.e shredos="xxxxx xxxxx xxxx" from /proc/cmdline. Specically written for ShredOS but could be used elsewhere.
 
